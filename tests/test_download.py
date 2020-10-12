@@ -3,5 +3,5 @@ from url2markdown.downloader import downloader
 
 
 def test_get_content():
-    article = downloader('https://newspaper.readthedocs.io/en/latest/user_guide/quickstart.html')
+    article = downloader('https://www.20min.ch/story/corona-zahlen-auf-einen-blick-803083076953')
     assert type(article) == Article
