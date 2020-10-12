@@ -1,11 +1,11 @@
 SHELL=/bin/bash
 
-.PHONY: dist/restic_qt
+.PHONY: dist/url2markdown
 
 dist/restic-qt: venv
 	( \
 	. venv/bin/activate; \
-	pyinstaller -F url2markdown; \
+	pyinstaller -F url2markdown/url2markdown.py; \
 	)
 
 venv: venv/bin/activate
@@ -22,12 +22,6 @@ init:
 	( \
 	pip3 install -r requirements.txt; \
 	pip3 install -e .; \
-	TEST_REPO=/tmp/test-resticqt; \
-	export RESTIC_REPOSITORY=$$TEST_REPO; \
-	export RESTIC_PASSWORD='foo'; \
-	rm -rf $$TEST_REPO; \
-	mkdir $$TEST_REPO; \
-	restic init; \
 	)
 
 test:
