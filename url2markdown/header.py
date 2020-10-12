@@ -4,7 +4,10 @@ from datetime import datetime
 class Header():
     def __init__(self, article, cli_topics):
         self.article = article
-        self.cli_topics = cli_topics
+        if cli_topics:
+            self.cli_topics = cli_topics.split(',')
+        else:
+            self.cli_topics = []
 
 
     def _build_header_dict(self):
