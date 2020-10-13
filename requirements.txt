@@ -1,3 +1,4 @@
 markdownify
 newspaper3k
 pytest
+pytest-cov
