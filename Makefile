@@ -27,8 +27,7 @@ init:
 test:
 	@. venv/bin/activate
 	@( \
-	cd tests/; \
-	pytest; \
+	pytest --cov=. --cov-report=html; \
 	)
 
 clean: distclean
