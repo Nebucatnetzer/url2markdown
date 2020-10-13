@@ -1,5 +1,7 @@
 # url2markdown
 
+!!!url2markdown is still under development and not suited for production yet!!!
+
 url2markdown lets you download an URL and save it as a Markdown file.
 Additionally you can provide a list of tags which will get added to the top of
 the file. The main idea behind the script is to download articles and feed them
@@ -16,21 +18,15 @@ url2markdown https://docs.python.org/3/howto/argparse.html --tags=Python,CLI
 
 ## Installation
 
-Install url2markdown by running:
+Install url2markdown by cloning the repository and inside it run:
 
 ```bash
-pip3 install url2markdown
+make init
 ```
-
-or by running:
-
-```bash
-make
-```
-
-Which will produce an executable called `url2markdown` under `dist`.
 
 ## Usage
+
+Currently you have to navigate into the repository and run `python3 url2markdown` in order to run the programm.
 
 ```bash
 usage: url2markdown [-h] (--file FILE | --url URL) [--topics TOPICS]
@@ -48,7 +44,7 @@ can optionally provide topics to which the Markdown version of the article
 should get linked to.
 
 ```bash
-url2markdown --url https://docs.python.org/3/library/argparse.html --topics Python,command line
+python3 url2markdown --url https://docs.python.org/3/library/argparse.html --topics Python,command line
 ```
 
 If you provide a file add the topics right behind the
