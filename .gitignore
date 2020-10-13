@@ -176,3 +176,6 @@ htmlcov/
 
 /static
 node_modules/
+
+*.md
+!README.md
