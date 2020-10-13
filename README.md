@@ -24,6 +24,11 @@ Install url2markdown by cloning the repository and inside it run:
 make init
 ```
 
+However url2markdown relies on newspaper to function. Please refer to its
+documentation to install otherwise url2markdown will not work properly
+(actually not a all):
+https://newspaper.readthedocs.io/en/latest/
+
 ## Usage
 
 Currently you have to navigate into the repository and run `python3 url2markdown` in order to run the programm.
