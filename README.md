@@ -30,6 +30,35 @@ make
 
 Which will produce an executable called `url2markdown` under `dist`.
 
+## Usage
+
+```bash
+usage: url2markdown [-h] (--file FILE | --url URL) [--topics TOPICS]
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --file FILE      A file containing one URL per line.
+  --url URL        The URL of the article to convert to Markdown.
+  --topics TOPICS  A list of comma separated topics e.g. 'foo,bar'.
+```
+
+You can either provide the URL to an article or a file containing multiple
+URLs. Make sure that you only have one URL per line. On the command line you
+can optionally provide topics to which the Markdown version of the article
+should get linked to.
+
+```bash
+url2markdown --url https://docs.python.org/3/library/argparse.html --topics Python,command line
+```
+
+If you provide a file add the topics right behind the
+URL separated by a space:
+
+```
+https://docs.python.org/3/library/argparse.html Python,command line,argparse
+https://docs.pytest.org/en/latest/parametrize.html Python,pytest,argparse
+```
+
 ## Contribute
 
 - Issue Tracker: github.com/Nebucatnetzer/url2markdown/issues
