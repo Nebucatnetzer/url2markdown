@@ -1,4 +1,4 @@
-- url2markdown
+# url2markdown
 
 url2markdown lets you download an URL and save it as a Markdown file.
 Additionally you can provide a list of tags which will get added to the top of
@@ -22,10 +22,28 @@ Install url2markdown by running:
 pip3 install url2markdown
 ```
 
+or by running:
+
+```bash
+make
+```
+
+Which will produce an executable called `url2markdown` under `dist`.
+
 ## Contribute
 
 - Issue Tracker: github.com/Nebucatnetzer/url2markdown/issues
 - Source Code: github.com/Nebucatnetzer/url2markdown
+
+### Development
+
+If you want to start developing run the following two commands to make sure
+your'e ready to go:
+
+```bash
+make init
+make test
+```
 
 ## Support
 
