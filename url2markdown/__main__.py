@@ -19,7 +19,8 @@ if __name__ == "__main__":
         with args.file as input_file:
             for line in input_file:
                 try:
-                    url, topics = line.split(' ')
+                    stripped_line = line.strip()
+                    url, topics = stripped_line.split(' ')
                 except ValueError:
                     url = line
                     topics = []
