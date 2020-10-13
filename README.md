@@ -8,7 +8,7 @@ the file. The main idea behind the script is to download articles and feed them
 to an Obsidia.md vault already extended with internal Obsidian links.
 
 ```
-url2markdown https://docs.python.org/3/howto/argparse.html --tags=Python,CLI
+url2markdown https://docs.python.org/3/howto/argparse.html --topics=Python,CLI
 ```
 
 ## Features
