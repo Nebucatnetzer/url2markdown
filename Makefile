@@ -2,7 +2,7 @@ SHELL=/bin/bash
 
 .PHONY: dist/url2markdown
 
-dist/restic-qt: venv
+dist/url2markdown: venv
 	( \
 	. venv/bin/activate; \
 	pyinstaller -F url2markdown/__main__.py -n url2markdown; \
