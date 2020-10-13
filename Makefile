@@ -5,7 +5,7 @@ SHELL=/bin/bash
 dist/restic-qt: venv
 	( \
 	. venv/bin/activate; \
-	pyinstaller -F url2markdown/url2markdown.py; \
+	pyinstaller -F url2markdown/__main__.py -n url2markdown; \
 	)
 
 venv: venv/bin/activate
