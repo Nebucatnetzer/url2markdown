@@ -7,4 +7,5 @@ def write_to_file(article, header):
         f.write(header)
         f.write('------')
         f.write('\n')
+    with open(str(article.title) + ".md", 'a') as f:
         f.write(markdown)
