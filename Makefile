@@ -10,9 +10,9 @@ dist/restic-qt: venv
 
 venv: venv/bin/activate
 
-venv/bin/activate: requirements.txt
+venv/bin/activate: requirements/base.txt
 	test -d venv || python3 -m venv venv
-	. venv/bin/activate; pip3 install wheel; pip3 install -Ur requirements.txt
+	. venv/bin/activate; pip3 install wheel; pip3 install -Ur requirements/base.txt
 	touch venv/bin/activate
 
 init:
@@ -20,7 +20,7 @@ init:
 	python3 -m venv venv
 	. venv/bin/activate
 	( \
-	pip3 install -r requirements.txt; \
+	pip3 install -r requirements/development.txt; \
 	pip3 install -e .; \
 	)
 
