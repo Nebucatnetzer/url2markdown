@@ -3,7 +3,7 @@ import markdownify
 
 
 def _build_path(title):
-    ressources_folder = "~/03_documents/ressources/"
+    ressources_folder = "~/03_documents/ressources/articles/"
     base_filename = str(title)
     short_path = os.path.join(ressources_folder, base_filename + ".md")
     return os.path.expanduser(short_path)
