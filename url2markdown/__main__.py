@@ -24,4 +24,5 @@ if __name__ == "__main__":
                 except ValueError:
                     url = line
                     topics = []
-                main(url, topics)
+                if url != '\n':
+                    main(url, topics)
