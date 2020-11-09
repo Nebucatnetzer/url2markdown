@@ -13,4 +13,4 @@ def test_dict_to_string(create_article):
     article.keywords = ['foo', 'bar', 'baz']
     string_header = header.Header(article, [])
     string = string_header.build_header()
-    assert string == '- meta:\n  - topics: [[foo]] [[bar]] [[baz]]\n  - date: [[2020-10-09]]\n  - authors: [[Daniel Waldmeier]] [[Kei Zuefall]]\n  - url: https://www.20min.ch/story/corona-zahlen-auf-einen-blick-803083076953\n'
+    assert string == '- meta:\n  - topics: [[foo]] [[bar]] [[baz]]\n  - date: [[2020-11-09]]\n  - url: https://www.republik.ch/2020/11/09/kann-die-schweiz-auf-rendite-aus-kriegs-material-verzichten\n'
