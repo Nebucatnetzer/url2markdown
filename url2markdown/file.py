@@ -2,9 +2,18 @@ import os.path
 import markdownify
 
 
+def _clean_title(raw_title):
+    title = str(raw_title)
+    bad_characters = ['«', '»', ',', '.', "'", "`",
+                      "?", "’", "{", "}", "(", ")", "[", "]", "!", "$"]
+    for character in bad_characters:
+        title = title.replace(character, '')
+    return title
+
+
 def _build_path(title):
     ressources_folder = "~/03_documents/ressources/articles/"
-    base_filename = str(title)
+    base_filename = _clean_title(title)
     short_path = os.path.join(ressources_folder, base_filename + ".md")
     return os.path.expanduser(short_path)
 
