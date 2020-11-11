@@ -12,7 +12,7 @@ def _clean_title(raw_title):
 
 
 def _build_path(title):
-    ressources_folder = "~/03_documents/resources/articles/"
+    ressources_folder = "~/03_documents/obsidian/articles/"
     base_filename = _clean_title(title)
     short_path = os.path.join(ressources_folder, base_filename + ".md")
     return os.path.expanduser(short_path)
